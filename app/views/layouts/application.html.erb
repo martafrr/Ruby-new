@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Oscar Arenas Larios – Escriptor, creatiu, emprenedor, editor, opinador compulsiu, nen estigues quiet ja!</title>
+	  <link href='//fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
 
-<%= yield %>
+	<body>
+		<header id="main_navigation" class="clearfix">
+			<%= link_to "Oscar Arenas Larios", root_path, class: "name" %>
+			<nav>
+				<%= link_to "Articles", posts_path %>
+				<a href="#">Projectes</a>
+				<a href="#">Contacte</a>
+			</nav>
+		</header>
 
-</body>
+		<%= yield %>
+
+		<footer id="main_footer">
+			<p class="copyright">&copy;2016 Oscar Arenas Larios</p>
+			<nav>
+				<a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.behance.net/arenaslarios" target="_blank"><i class="fa fa-behance"></i></a>
+				<a href="#" target="_blank"> <i class="fa fa-facebook"></i></a>
+			</nav>
+		</footer>
+
+	</body>
 </html>

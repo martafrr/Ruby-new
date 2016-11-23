@@ -1,0 +1,25 @@
+<%= form_for @post do |f| %>
+	<% if @post.errors.any? %>
+		<h2><%= pluralize(@post.errors.count, "error") %> ha(n) impedit guardar aquest article:</h2>
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<%= f.label :title, "Títol" %><br>
+	<%= f.text_field :title %>
+
+	<br>
+	<br>
+
+	<%= f.label :content, "Escriu el teu article aquí" %><br>
+	<%= f.text_area :content %>
+	
+	<br>
+	<br>
+
+	<%= f.submit "Crea un article" %>
+
+<% end %>

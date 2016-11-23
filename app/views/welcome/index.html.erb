@@ -1,0 +1,22 @@
+<div class="wrapper wrapper_padding clearfix">
+	<div class="col-1 about homepage_content">
+		<h2>Hola</h2>
+		<hr>
+		<p>Nacido en Lleida en 1990, soy redactor porque escribo y creativo porque imagino. Me encontrarás leyendo un buen libro o apretando F5 compulsivamente en mi lector de feeds.</p>
+		<p>He encontrado trabajo escribiendo la misma carta de presentación cada día, siempre con un estilo distinto en <a href="www.365formasdepedirtrabajo.com">www.365formasdepedirtrabajo.com</a>.</p>
+	</div>
+
+	<div class="col-2 homepage_content">
+		<h2>Coses que he escrit</h2>
+		<hr>
+		<% @posts.each do |post| %>
+			<h3><a href="#"><%= link_to post.title, post %></a></h3>
+			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
+	</div>
+	<div class="col-3 homepage_content">
+		<h2>Coses que he fet</h2>
+		<hr>
+
+	</div>
+</div>

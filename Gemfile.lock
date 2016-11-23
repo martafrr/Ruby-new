@@ -75,6 +75,10 @@ GEM
     multi_json (1.12.1)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
+    posix-spawn (0.3.12)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -104,6 +108,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (11.3.0)
     rdoc (4.3.0)
+    redcarpet (3.2.3)
     sass (3.4.22)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -139,6 +144,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -148,7 +154,9 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  pygments.rb (~> 0.6.0)
   rails (= 4.2.0)
+  redcarpet (~> 3.2.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
