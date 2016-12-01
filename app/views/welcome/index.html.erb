@@ -14,9 +14,14 @@
 			<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
 		<% end %>
 	</div>
+
 	<div class="col-3 homepage_content">
 		<h2>Coses que he fet</h2>
 		<hr>
-
+		<% @projects.each do |project| %>
+			<h3><a href="#"><%= link_to project.title, project %></a></h3>
+			<p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+		<% end %>
 	</div>
+
 </div>
